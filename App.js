@@ -5,6 +5,7 @@ import logo from './assets/tapthatlogo.jpeg';
 import { ThemeProvider, Button } from 'react-native-elements';
 import Overlay from './components/Overlay.js';
 import HomeScreen from './components/HomeScreen.js';
+import Tap from './Tap.js';
 
 const theme = {
   Button: {
@@ -17,21 +18,24 @@ const theme = {
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Image resizeMode={'cover'} source={logo} style={styles.logo} />
+    // <SafeAreaView style={styles.container}>
+    //   <Image resizeMode={'cover'} source={logo} style={styles.logo} />
 
-      <Text style={styles.instructions}>How well can you maintain a rhythm?</Text>
-      {/* <ThemeProvider theme={theme}>
-        <Button title="Some Button"/>
-      </ThemeProvider>
-      <Overlay /> */}
-      <HomeScreen />
-      <TouchableOpacity
-        onPress={() => alert('Sike this hasn\'t been made yet')}
-        style={styles.button}>
-        <Text style={styles.buttonText}>Play</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
+    //   <Text style={styles.instructions}>How well can you maintain a rhythm?</Text>
+    //   {/* <ThemeProvider theme={theme}>
+    //     <Button title="Some Button"/>
+    //   </ThemeProvider>
+    //   <Overlay /> */}
+    //   <HomeScreen />
+    //   <TouchableOpacity
+    //     onPress={() => alert('Sike this hasn\'t been made yet')}
+    //     style={styles.button}>
+    //     <Text style={styles.buttonText}>Play</Text>
+    //   </TouchableOpacity>
+    //   <StatusBar style="auto" />
+    // </SafeAreaView>
+    <SafeAreaView>
+      <Tap />
     </SafeAreaView>
   );
 }
